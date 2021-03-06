@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+
+  elasticSearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.5.2
+    container_name: elasticSearch
+    ports:
+      - 9300:9300
+      - 9200:9200 
+    environment:
+      - discovery.type=single-node
